@@ -1,5 +1,6 @@
 import type {Config} from 'tailwindcss';
 import typography from '@tailwindcss/typography';
+import animate from 'tailwindcss-animate';
 
 export default {
   darkMode: ['class'],
@@ -11,9 +12,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Lora', 'serif'],
-        code: ['monospace'],
+        body: ['var(--font-inter)', 'sans-serif'],
+        headline: ['var(--font-lora)', 'serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -96,5 +96,5 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), typography],
+  plugins: [animate, typography],
 } satisfies Config;
