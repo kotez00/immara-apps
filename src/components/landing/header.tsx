@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from 'react';
-import { Menu, Code } from 'lucide-react';
+import { Menu, Code, Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { useTheme } from '@/hooks/use-theme';
 
 const navLinks = [
   { href: '#services', label: 'Services' },
@@ -13,6 +14,22 @@ const navLinks = [
   { href: '#recommender', label: 'Recommender' },
   { href: '#contact', label: 'Contact' },
 ];
+
+function ThemeToggle() {
+    const { theme, setTheme } = useTheme();
+  
+    return (
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      >
+        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+        <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        <span className="sr-only">Toggle theme</span>
+      </Button>
+    );
+}
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,43 +42,45 @@ export default function Header() {
           ImmaraApps
         </a>
 
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="transition-colors hover:text-primary">
-              {link.label}
-            </a>
-          ))}
-        </nav>
-
-        <div className="md:hidden">
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Open menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[240px]">
-              <div className="flex flex-col p-6">
-                <a href="#" className="flex items-center gap-2 mb-8 font-bold text-lg" onClick={() => setIsOpen(false)}>
-                  <Code className="h-6 w-6 text-primary" />
-                  ImmaraApps
+        <div className="flex items-center gap-2">
+            <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+            {navLinks.map((link) => (
+                <a key={link.href} href={link.href} className="transition-colors hover:text-primary">
+                {link.label}
                 </a>
-                <nav className="flex flex-col gap-4">
-                  {navLinks.map((link) => (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setIsOpen(false)}
-                      className="text-lg font-medium transition-colors hover:text-primary"
-                    >
-                      {link.label}
+            ))}
+            </nav>
+            <ThemeToggle />
+            <div className="md:hidden">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Open menu</span>
+                </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[240px]">
+                <div className="flex flex-col p-6">
+                    <a href="#" className="flex items-center gap-2 mb-8 font-bold text-lg" onClick={() => setIsOpen(false)}>
+                    <Code className="h-6 w-6 text-primary" />
+                    ImmaraApps
                     </a>
-                  ))}
-                </nav>
-              </div>
-            </SheetContent>
-          </Sheet>
+                    <nav className="flex flex-col gap-4">
+                    {navLinks.map((link) => (
+                        <a
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setIsOpen(false)}
+                        className="text-lg font-medium transition-colors hover:text-primary"
+                        >
+                        {link.label}
+                        </a>
+                    ))}
+                    </nav>
+                </div>
+                </SheetContent>
+            </Sheet>
+            </div>
         </div>
       </div>
     </header>
