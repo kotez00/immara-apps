@@ -2,21 +2,23 @@ import { Button } from '@/components/ui/button';
 
 export default function Hero() {
   return (
-    <section id="hero" className="py-20 sm:py-32 bg-background">
-      <div className="container mx-auto px-4 text-center">
+    <section id="hero" className="relative py-20 sm:py-32 bg-background overflow-hidden">
+      <div className="dot-pattern"></div>
+      <div className="glow-effect"></div>
+      <div className="container mx-auto px-4 text-center relative z-10">
         <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl font-headline">
-          Build, Modernize, and Scale with ImmaraApps
+          Crafting Digital Excellence
         </h1>
-        <p className="mt-6 text-lg leading-8 text-muted-foreground">
-          From innovative app design to strategic IT consultancy, we are your partners in digital transformation.
+        <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
+          We build beautiful, high-performance web and mobile applications that drive results. From initial concept to final launch, we are your dedicated partners in innovation.
         </p>
         <div className="mt-10 flex items-center justify-center gap-x-6">
-          <a href="#recommender">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">Get Started</Button>
+          <a href="#contact">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">Start a Project</Button>
           </a>
           <a href="#services">
-            <Button size="lg" variant="outline">
-              Learn More &rarr;
+            <Button size="lg" variant="outline" className="shadow-sm">
+              Explore Services
             </Button>
           </a>
         </div>
