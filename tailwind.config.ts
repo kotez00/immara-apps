@@ -12,8 +12,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['var(--font-inter)', 'sans-serif'],
-        headline: ['var(--font-lora)', 'serif'],
+        body: ['Lato', 'sans-serif'],
+        headline: ['Merriweather', 'serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
