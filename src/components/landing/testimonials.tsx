@@ -16,7 +16,7 @@ const testimonials = [
     quote:
       "ImmaraApps transformed our vision into a stunning, functional mobile app. Their team's expertise and dedication were evident in every step. We couldn't be happier with the outcome.",
     avatarUrl: 'https://placehold.co/100x100.png',
-    hint: 'woman portrait',
+    hint: 'ceo portrait',
   },
   {
     name: 'Michael B.',
@@ -24,7 +24,7 @@ const testimonials = [
     quote:
       'The new e-commerce platform built by ImmaraApps has been a game-changer. Our sales have increased by 40%, and customer feedback has been overwhelmingly positive. A truly professional team.',
     avatarUrl: 'https://placehold.co/100x100.png',
-    hint: 'man portrait',
+    hint: 'marketing director',
   },
   {
     name: 'Dr. Emily Carter',
@@ -32,7 +32,7 @@ const testimonials = [
     quote:
       'Modernizing our patient portal was a massive undertaking, but ImmaraApps handled it with exceptional skill and attention to detail. Their IT consultancy was invaluable.',
     avatarUrl: 'https://placehold.co/100x100.png',
-    hint: 'professional woman',
+    hint: 'doctor portrait',
   },
 ];
 

@@ -6,16 +6,16 @@ const transformations = [
   {
     title: 'Corporate Website Revamp',
     beforeUrl: 'https://placehold.co/600x400.png',
-    beforeHint: 'old website',
+    beforeHint: 'outdated website',
     afterUrl: 'https://placehold.co/600x400.png',
-    afterHint: 'modern website',
+    afterHint: 'modern corporate',
   },
   {
     title: 'E-commerce Store Upgrade',
     beforeUrl: 'https://placehold.co/600x400.png',
-    beforeHint: 'outdated shop',
+    beforeHint: 'old e-commerce',
     afterUrl: 'https://placehold.co/600x400.png',
-    afterHint: 'sleek storefront',
+    afterHint: 'modern e-commerce',
   },
 ];
 
