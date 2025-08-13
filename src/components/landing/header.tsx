@@ -21,7 +21,7 @@ export default function Header() {
       <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
         <a href="#" className="flex items-center gap-2 font-bold text-lg">
           <Code className="h-6 w-6 text-primary" />
-          Immara Showcase
+          ImmaraApps
         </a>
 
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
@@ -44,7 +44,7 @@ export default function Header() {
               <div className="flex flex-col p-6">
                 <a href="#" className="flex items-center gap-2 mb-8 font-bold text-lg" onClick={() => setIsOpen(false)}>
                   <Code className="h-6 w-6 text-primary" />
-                  Immara Showcase
+                  ImmaraApps
                 </a>
                 <nav className="flex flex-col gap-4">
                   {navLinks.map((link) => (
