@@ -1,6 +1,7 @@
 "use client";
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
+import { useFormStatus } from 'react-dom';
 import { getRecommendation, type RecommenderActionState } from '@/lib/actions';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
@@ -28,7 +29,7 @@ function SubmitButton() {
 
 export default function Recommender() {
   const initialState: RecommenderActionState = {};
-  const [state, formAction] = useFormState(getRecommendation, initialState);
+  const [state, formAction] = useActionState(getRecommendation, initialState);
 
   return (
     <section id="recommender" className="py-20 sm:py-32">
