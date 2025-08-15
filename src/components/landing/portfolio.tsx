@@ -13,7 +13,7 @@ const portfolioItems = [
   {
     title: 'SaaS Analytics Dashboard',
     description: 'A powerful web-based dashboard for visualizing complex business intelligence data.',
-    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFzaGJvYXJkc3xlbnwwfHwwfHx8MA%3D%3D',
+    imageUrl: 'https://plus.unsplash.com/premium_vector-1732165698164-8e2bf22cc6df?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fFNhYVMlMjBBbmFseXRpY3MlMjBEYXNoYm9hcmR8ZW58MHx8MHx8fDA%3D',
     hint: 'analytics dashboard',
     tags: ['Web App', 'Data Viz', 'SaaS'],
   },
@@ -27,7 +27,7 @@ const portfolioItems = [
   {
     title: 'Travel Booking Platform',
     description: 'An engaging mobile app that simplifies the process of booking flights and hotels.',
-    imageUrl: 'https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D',
+    imageUrl: 'https://plus.unsplash.com/premium_vector-1747187551836-e118776287fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fFRyYXZlbCUyMEJvb2tpbmclMjBQbGF0Zm9ybXxlbnwwfHwwfHx8MA%3D%3Ds',
     hint: 'booking app',
     tags: ['Mobile App', 'E-commerce', 'Travel'],
   },
@@ -42,27 +42,26 @@ export default function Portfolio() {
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">Proven by Results</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">A glimpse into our passion for creating exceptional digital products that delight users and drive growth.</p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2">
           {portfolioItems.map((item, index) => (
-            <Card key={index} className="overflow-hidden group transition-all duration-300 hover:shadow-xl border-border/50 hover:border-primary/30">
+            <Card key={index} className="flex flex-col overflow-hidden group transition-all duration-300 hover:shadow-xl border-border/50 hover:border-primary/30">
               <CardHeader className="p-0">
-                <div className="overflow-hidden rounded-t-lg">
+                <div className="overflow-hidden aspect-video relative">
                   <Image
                     src={item.imageUrl}
                     alt={item.title}
-                    width={600}
-                    height={400}
+                    fill
                     data-ai-hint={item.hint}
-                    className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                   />
                 </div>
               </CardHeader>
-              <CardContent className="p-6 bg-card">
+              <CardContent className="p-6 bg-card flex-1 flex flex-col">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {item.tags.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
                 </div>
                 <CardTitle className="mb-2 font-headline text-xl">{item.title}</CardTitle>
-                <CardDescription>{item.description}</CardDescription>
+                <CardDescription className="flex-1">{item.description}</CardDescription>
               </CardContent>
             </Card>
           ))}
