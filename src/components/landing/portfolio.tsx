@@ -6,7 +6,7 @@ const portfolioItems = [
   {
     title: 'Fintech Mobile App',
     description: 'A sleek and secure mobile banking application with intuitive financial management tools.',
-    imageUrl: '/image1.png',
+    imageUrl: '/image1.jpg',
     hint: 'finance app',
     tags: ['Mobile App', 'UI/UX Design', 'Fintech'],
   },
@@ -27,7 +27,7 @@ const portfolioItems = [
   {
     title: 'Travel Booking Platform',
     description: 'An engaging mobile app that simplifies the process of booking flights and hotels.',
-    imageUrl: '/image1.png',
+    imageUrl: 'https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHdlYiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D',
     hint: 'booking app',
     tags: ['Mobile App', 'E-commerce', 'Travel'],
   },
