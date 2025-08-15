@@ -7,12 +7,13 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useTheme } from '@/hooks/use-theme';
 
 const navLinks = [
-  { href: '#services', label: 'Services' },
-  { href: '#portfolio', label: 'Portfolio' },
-  { href: '#transformations', label: 'Transformations' },
-  { href: '#testimonials', label: 'Testimonials' },
-  { href: '#recommender', label: 'Recommender' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/#services', label: 'Services' },
+  { href: '/#portfolio', label: 'Portfolio' },
+  { href: '/#transformations', label: 'Transformations' },
+  { href: '/#testimonials', label: 'Testimonials' },
+  { href: '/#recommender', label: 'Recommender' },
+  { href: '/invoice', label: 'Invoice' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 function ThemeToggle() {
@@ -37,7 +38,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
-        <a href="#" className="flex items-center gap-2 font-bold text-lg">
+        <a href="/" className="flex items-center gap-2 font-bold text-lg">
           <Code className="h-6 w-6 text-primary" />
           ImmaraApps
         </a>
@@ -61,7 +62,7 @@ export default function Header() {
                 </SheetTrigger>
                 <SheetContent side="right" className="w-[240px]">
                 <div className="flex flex-col p-6">
-                    <a href="#" className="flex items-center gap-2 mb-8 font-bold text-lg" onClick={() => setIsOpen(false)}>
+                    <a href="/" className="flex items-center gap-2 mb-8 font-bold text-lg" onClick={() => setIsOpen(false)}>
                     <Code className="h-6 w-6 text-primary" />
                     ImmaraApps
                     </a>
