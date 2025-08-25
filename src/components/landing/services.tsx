@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
-import { MonitorSmartphone, LayoutTemplate } from 'lucide-react';
+import { MonitorSmartphone, LayoutTemplate, ShoppingCart, Briefcase } from 'lucide-react';
 
 const services = [
   {
@@ -12,6 +12,16 @@ const services = [
     title: 'Mobile App Design & Development',
     description: 'We design and build intuitive, engaging mobile apps for iOS and Android. Our agile process ensures we deliver a product that your users will love and that meets your business objectives.',
   },
+  {
+    icon: <ShoppingCart className="w-8 h-8 text-primary" />,
+    title: 'E-commerce Solutions',
+    description: 'We build powerful, scalable e-commerce platforms that drive sales. From custom storefronts to seamless checkout experiences, we provide end-to-end solutions for online retailers.',
+  },
+  {
+    icon: <Briefcase className="w-8 h-8 text-primary" />,
+    title: 'IT Consultancy',
+    description: 'Our expert consultants provide strategic guidance to help you navigate the complexities of technology. We help you make informed decisions to achieve your business goals and scale effectively.',
+  },
 ];
 
 export default function Services() {
@@ -21,12 +31,12 @@ export default function Services() {
         <div className="text-center mb-16">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">Our Core Services</p>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">What We Do Best</h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">We focus on what we are experts at: creating exceptional websites and mobile applications that solve problems and drive success for your business.</p>
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">We offer a complete suite of digital services to transform your ideas into reality. Our expertise ensures your project succeeds from concept to launch.</p>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <Card key={index} className="text-left p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-transparent hover:border-primary/20 bg-card hover:-translate-y-1">
-                <div className="mb-5 flex items-center justify-start w-14 h-14 rounded-full bg-primary/10">{service.icon}</div>
+                <div className="mb-5 flex items-center justify-center w-14 h-14 rounded-full bg-primary/10">{service.icon}</div>
                 <CardHeader className="p-0">
                     <CardTitle className="font-headline text-2xl mb-3">{service.title}</CardTitle>
                 </CardHeader>
