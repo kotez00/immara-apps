@@ -1,9 +1,10 @@
+
 "use client";
 
 import { useState } from 'react';
 import { Menu, Code, Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
 import { useTheme } from 'next-themes';
 
 const navLinks = [
@@ -61,6 +62,7 @@ export default function Header() {
                 </Button>
                 </SheetTrigger>
                 <SheetContent side="right" className="w-[240px]">
+                <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
                 <div className="flex flex-col p-6">
                     <a href="/" className="flex items-center gap-2 mb-8 font-bold text-lg" onClick={() => setIsOpen(false)}>
                     <Code className="h-6 w-6 text-primary" />
