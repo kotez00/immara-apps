@@ -39,7 +39,7 @@ export async function getRecommendation(
   } catch (error) {
     console.error('Error getting recommendation:', error);
     return {
-      message: 'An unexpected error occurred. Please try again later.',
+      message: 'An unexpected error occurred. Our AI is currently offline, please try again later.',
     };
   }
 }

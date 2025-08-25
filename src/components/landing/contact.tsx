@@ -6,32 +6,34 @@ import { Label } from '@/components/ui/label';
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 sm:py-32 bg-secondary/50">
+    <section id="contact" className="py-20 sm:py-32 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
-          <Card className="shadow-lg">
-            <CardHeader className="text-center">
-              <p className="text-primary font-semibold mb-2">Let's Talk</p>
-              <CardTitle className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">Ready to Start a Project?</CardTitle>
-              <CardDescription className="mt-4 text-lg text-muted-foreground">Have a project in mind? We'd love to hear from you. Fill out the form and we'll get back to you.</CardDescription>
+          <Card className="border-2 border-primary/20 shadow-2xl shadow-primary/10">
+            <CardHeader className="text-center p-8">
+              <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">Get in Touch</p>
+              <CardTitle className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">Ready to Start Your Project?</CardTitle>
+              <CardDescription className="mt-4 text-lg text-muted-foreground">
+                Let's build something amazing together. Fill out the form below to get a quote.
+              </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="px-8 pb-8">
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
-                    <Input id="name" placeholder="Your Name" />
+                    <Label htmlFor="name" className="font-semibold">Name</Label>
+                    <Input id="name" placeholder="e.g. Jane Doe" className="bg-secondary/50" />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="your@email.com" />
+                    <Label htmlFor="email" className="font-semibold">Email</Label>
+                    <Input id="email" type="email" placeholder="e.g. jane@example.com" className="bg-secondary/50" />
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="message">How can we help?</Label>
-                  <Textarea id="message" placeholder="Tell us about your project..." className="min-h-[140px]" />
+                  <Label htmlFor="message" className="font-semibold">Tell us about your project</Label>
+                  <Textarea id="message" placeholder="Describe your vision, goals, and any specific requirements..." className="min-h-[140px] bg-secondary/50" />
                 </div>
-                <Button type="submit" size="lg" className="w-full">Send Message</Button>
+                <Button type="submit" size="lg" className="w-full font-bold text-lg py-6">Get a Quote</Button>
               </form>
             </CardContent>
           </Card>

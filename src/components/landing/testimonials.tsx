@@ -11,28 +11,28 @@ import { Star } from 'lucide-react';
 
 const testimonials = [
   {
-    name: 'Sarah L.',
-    title: 'CEO, FinTech Startup',
+    name: 'Sarah Chen',
+    title: 'Founder, Nova Capital',
     quote:
-      "ImmaraApps transformed our vision into a stunning, functional mobile app. Their team's expertise and dedication were evident in every step. We couldn't be happier with the outcome.",
+      "ImmaraApps delivered a flawless mobile app that exceeded our expectations. Their agility and commitment to quality are what sets them apart. They are a true partner, not just a vendor.",
     avatarUrl: 'https://placehold.co/100x100.png',
-    hint: 'ceo portrait',
+    hint: 'female founder portrait',
   },
   {
-    name: 'Michael B.',
-    title: 'Marketing Director, E-commerce Brand',
+    name: 'Michael Rodriguez',
+    title: 'CMO, FreshBloom Goods',
     quote:
-      'The new e-commerce platform built by ImmaraApps has been a game-changer. Our sales have increased by 40%, and customer feedback has been overwhelmingly positive. A truly professional team.',
+      'The e-commerce site they built for us is fast, beautiful, and converts like crazy. Our online sales have doubled, and the team was a pleasure to work with from start to finish.',
     avatarUrl: 'https://placehold.co/100x100.png',
-    hint: 'marketing director',
+    hint: 'male marketing director',
   },
   {
-    name: 'Dr. Emily Carter',
-    title: 'Clinic Administrator',
+    name: 'David Lee',
+    title: 'CEO, Healthify',
     quote:
-      'Modernizing our patient portal was a massive undertaking, but ImmaraApps handled it with exceptional skill and attention to detail. Their IT consultancy was invaluable.',
+      'The website revamp has been a huge success. We\'ve seen a significant increase in user engagement and lead generation. ImmaraApps understood our vision and executed it perfectly.',
     avatarUrl: 'https://placehold.co/100x100.png',
-    hint: 'doctor portrait',
+    hint: 'male ceo portrait',
   },
 ];
 
@@ -49,42 +49,42 @@ export default function Testimonials() {
     <section id="testimonials" className="py-20 sm:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <p className="text-primary font-semibold mb-2">Client Stories</p>
+           <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-2">Don't just take our word for it</p>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">
-            Trusted by Innovators
+            Trusted by Innovators and Founders
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what our clients have to say
-            about their experience with us.
+          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+            Our clients are our biggest advocates. Here's what they have to say
+            about their experience partnering with ImmaraApps.
           </p>
         </div>
         <Carousel
           opts={{
             align: 'start',
           }}
-          className="w-full max-w-4xl mx-auto"
+          className="w-full max-w-5xl mx-auto"
         >
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1 h-full">
-                  <Card className="h-full flex flex-col justify-between shadow-lg hover:shadow-xl transition-all duration-300">
-                    <CardContent className="p-6 flex flex-col items-center text-center">
+                <div className="p-2 h-full">
+                  <Card className="h-full flex flex-col justify-between shadow-lg hover:shadow-2xl transition-all duration-300 bg-card border-border/50 hover:border-primary/20">
+                    <CardContent className="p-8 flex flex-col items-center text-center flex-1">
                       <Image
                         src={testimonial.avatarUrl}
                         alt={testimonial.name}
                         data-ai-hint={testimonial.hint}
                         width={80}
                         height={80}
-                        className="rounded-full mb-4 border-2 border-primary/20"
+                        className="rounded-full mb-6 border-2 border-primary/20"
                       />
-                      <p className="text-muted-foreground italic mb-4">
+                      <p className="text-muted-foreground text-base italic flex-1 mb-6">
                         "{testimonial.quote}"
                       </p>
                       <StarRating />
                     </CardContent>
-                    <div className="bg-secondary/50 p-4 text-center rounded-b-lg">
-                      <p className="font-bold font-headline text-foreground">
+                    <div className="bg-secondary/50 p-6 text-center rounded-b-lg border-t">
+                      <p className="font-bold font-headline text-lg text-foreground">
                         {testimonial.name}
                       </p>
                       <p className="text-sm text-muted-foreground">
