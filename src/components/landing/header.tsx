@@ -9,9 +9,10 @@ import { useTheme } from 'next-themes';
 const navLinks = [
   { href: '/#services', label: 'Services' },
   { href: '/#portfolio', label: 'Portfolio' },
-  { href: '/#transformations', label: 'Case Studies' },
+  { href: '/#recommender', label: 'AI Recommender' },
   { href: '/#testimonials', label: 'Testimonials' },
   { href: '/#contact', label: 'Contact' },
+  { href: '/invoice', label: 'Invoice' },
 ];
 
 function ThemeToggle() {
@@ -45,7 +46,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
             <nav className="hidden md:flex items-center gap-6 text-base font-medium">
             {navLinks.map((link) => (
-                <a key={link.href} href={link.href} className="transition-colors hover:text-primary text-muted-foreground hover:text-primary">
+                <a key={link.href} href={link.href} className="transition-colors text-muted-foreground hover:text-primary">
                 {link.label}
                 </a>
             ))}

@@ -2,7 +2,7 @@ import Header from '@/components/landing/header';
 import Hero from '@/components/landing/hero';
 import Services from '@/components/landing/services';
 import Portfolio from '@/components/landing/portfolio';
-import Transformations from '@/components/landing/transformations';
+import Recommender from '@/components/landing/recommender';
 import Testimonials from '@/components/landing/testimonials';
 import CallToAction from '@/components/landing/cta';
 import Contact from '@/components/landing/contact';
@@ -16,7 +16,7 @@ export default function Home() {
         <Hero />
         <Services />
         <Portfolio />
-        <Transformations />
+        <Recommender />
         <Testimonials />
         <CallToAction />
         <Contact />
