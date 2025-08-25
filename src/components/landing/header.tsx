@@ -13,7 +13,6 @@ const navLinks = [
   { href: '/#recommender', label: 'AI Recommender' },
   { href: '/#testimonials', label: 'Testimonials' },
   { href: '/#contact', label: 'Contact' },
-  { href: '/invoice', label: 'Invoice' },
 ];
 
 function ThemeToggle() {
