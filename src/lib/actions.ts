@@ -93,7 +93,7 @@ export async function sendContactMessage(
     try {
         await resend.emails.send({
             from: 'ImmaraApps Inquiry <onboarding@resend.dev>',
-            to: 'your-email@example.com', // CHANGE THIS to your actual email
+            to: 'developer.kotez@gmail.com',
             subject: `New message from ${name}`,
             reply_to: email,
             react: React.createElement(ContactFormEmail, { name, email, message }),
