@@ -6,8 +6,6 @@ import { Resend } from 'resend';
 import ContactFormEmail from '@/components/emails/contact-form-email';
 import * as React from 'react';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const RecommendationSchema = z.object({
   recommendedService: z.string(),
   reason: z.string(),
@@ -81,6 +79,14 @@ export async function sendContactMessage(
             message: 'Please correct the errors below.',
         };
     }
+    
+    if (!process.env.RESEND_API_KEY) {
+      return {
+        message: 'Resend API key is not configured. Unable to send message.',
+      };
+    }
+    
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     const { name, email, message } = validatedFields.data;
 
